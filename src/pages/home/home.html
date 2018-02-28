@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ORRASNE</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+      <ion-list-header>
+        Choose authorities:
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Select All</ion-label>
+        <ion-checkbox color="blue" [(ngModel)]="selectAllModel" (click)="selectAll()"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hospitals</ion-label>
+        <ion-checkbox [(ngModel)]="hospital" color="blue" (click)="check()"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Police Stations</ion-label>
+        <ion-checkbox [(ngModel)]="police" color="blue" (click)="check()"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Barangay Hall</ion-label>
+        <ion-checkbox [(ngModel)]="barangay" color="blue" (click)="check()"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <div text-center>
+      <button ion-button icon-right (click)="send()">
+      Send
+      <ion-icon name="send"></ion-icon>
+      </button>
+    </div>
+
+    <div text-center>
+      <button ion-button icon-right (click)="backToCamera()">
+      Camera
+      <ion-icon name="camera"></ion-icon>
+      </button>
+    </div>
+
+    <div text-center>
+      <button ion-button icon-right (click)="offlineModal()">
+      Offline mode
+      </button>
+    </div>
+
+    <ion-card>
+      <img [attr.src]="base64image" />
+    </ion-card>
+
+</ion-content>

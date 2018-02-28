@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Profile
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="homepage()">
+       Close
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Contact Number: </ion-label>
+    <ion-select [(ngModel)]="number" multiple="true">
+      <ion-option value="+639553263408">Sto. Rosario Brgy. Hall</ion-option>
+      <ion-option value="+639553263407">Pulung Bulu Barangay Hall</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Message</ion-label>
+    <ion-textarea [(ngModel)]="text" name="description"></ion-textarea>
+  </ion-item>
+  <div text-center>
+    <button ion-button icon-right (click)="sendToBrgy()">
+      sendToBrgy
+      <ion-icon name="send"></ion-icon>
+      </button>
+  </div>
+
+  <div text-center>
+    <button ion-button icon-right (click)="callToBrgy()">
+      callToBrgy
+      <ion-icon name="send"></ion-icon>
+      </button>
+  </div>
+</ion-content>
